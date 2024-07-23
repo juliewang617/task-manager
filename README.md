@@ -1,14 +1,20 @@
-```markdown
-# TaskListApp
+<img width="367" alt="image" src="https://github.com/user-attachments/assets/315fcdff-0d2f-4e29-8dc7-2379dcc09769">
+
+## Task-Manager
 
 This is a React Native app for managing tasks.
+
+### Features
+* Add a task by writing a task at the bottom of the list and clicking the blue plus button.
+* Delete a task by long pressing it and selecting "Delete". 
+* Filter tasks by "All", "Complete" or "Incomplete" by selecting the appropriate options on the screen.
+
 
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/) (recommended version: 14.x or later)
-- npm (comes with Node.js) or [yarn](https://yarnpkg.com/)
-- Expo CLI (if using Expo) - Install via `npm install -g expo-cli`
-- Android Studio (for Android development) or Xcode (for iOS development)
+- npm (comes with Node.js)
+- Expo Go App installed on your phone 
 
 ## Installation
 
@@ -31,32 +37,15 @@ Using npm:
 npm install
 ```
 
-Using yarn:
-
+Install expo: 
 ```bash
-yarn install
+npm install expo
 ```
 
 ### Start the Project
 
-If you're using Expo:
-
 ```bash
-expo start
-```
-
-If you're using React Native CLI:
-
-#### For iOS (requires Xcode):
-
-```bash
-npx react-native run-ios
-```
-
-#### For Android (requires Android Studio):
-
-```bash
-npx react-native run-android
+npx expo start
 ```
 
 ## Running the App
@@ -65,23 +54,10 @@ Follow the instructions in the terminal to open the app on an emulator or a phys
 
 ### Using Expo
 
-1. Run `expo start` in your terminal.
+1. Run `npx expo start` in your terminal.
 2. Open the Expo Go app on your mobile device.
-3. Scan the QR code provided in the terminal to open the app on your device.
-
-### Using React Native CLI
-
-#### iOS
-
-1. Run `npx react-native run-ios` in your terminal.
-2. Ensure Xcode is installed and properly configured.
-
-#### Android
-
-1. Run `npx react-native run-android` in your terminal.
-2. Ensure Android Studio is installed and an Android emulator is running, or connect a physical device via USB debugging.
+3. Scan the QR code provided in the terminal to open the app on your device. Or, press `a` in the terminal to open the Android emulator if you have one, or `i` to open the iOS emulator. 
 
 ## Notes
-
-- Ensure you have the necessary environment set up for React Native development. You can follow the [React Native documentation](https://reactnative.dev/docs/environment-setup) for more details.
-- For Expo, you can refer to the [Expo documentation](https://docs.expo.dev/) for additional help and resources.
+- I used the following third-party libraries: @expo/vector-icons for various icons for the app UI
+- For Expo, please refer to the [Expo documentation](https://docs.expo.dev/) for additional help and resources.

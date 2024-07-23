@@ -1,4 +1,4 @@
-import { Text, StyleSheet, Pressable } from "react-native"
+import { View, Text, StyleSheet, Pressable } from "react-native"
 import { Ionicons } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -16,19 +16,19 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
  */
 export default function TaskItem({taskDetails, isCompleted, index, checkTaskItem, deleteTaskItem}){
     return(
-        <Pressable
-        style={[{backgroundColor: isCompleted ? '#CAE2D9' : '#fff'}, styles.container]}
-        onLongPress={() => (deleteTaskItem(index))}
-        >
-            <Text style={[{color: isCompleted ? '#388186' : '#737373'}, styles.taskDetails]}>{taskDetails}</Text>
+        <View style={{display: taskDetails === "" ? 'none' : 'flex'}}>
             <Pressable
-            onPress={()=>(checkTaskItem(index))}>
-                {isCompleted ? <Ionicons name="checkbox" size={24} color="#57B09B" />
-                : <MaterialCommunityIcons name="checkbox-blank-outline" size={24} color="#737373" />}
+            style={[{backgroundColor: isCompleted ? '#CAE2D9' : '#fff'}, styles.container]}
+            onLongPress={() => (deleteTaskItem(index))}>
+                <Text style={[{color: isCompleted ? '#388186' : '#737373'}, styles.taskDetails]}>{taskDetails}</Text>
+                <Pressable
+                onPress={()=>(checkTaskItem(index))}>
+                    {isCompleted ? <Ionicons name="checkbox" size={24} color="#57B09B" />
+                    : <MaterialCommunityIcons name="checkbox-blank-outline" size={24} color="#737373" />}
+                </Pressable>
             </Pressable>
-        </Pressable>
+        </View>
     )
-
 }
 
 // Contains CSS styling information. 

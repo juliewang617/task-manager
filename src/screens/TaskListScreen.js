@@ -22,14 +22,32 @@ export default function TaskListScreen(){
      * Handles updating filteredTaskData depending on filterMode and taskData
      */
     useEffect(() => {
-        const filterList = () => {
+        if (filterMode === "incomplete"){
             setFilteredTaskData(
-                filterMode === "all" ? taskData : 
-                filterMode === "incomplete" ? taskData.filter(task => task.isCompleted === false) : 
-                taskData.filter(task => task.isCompleted === true)
+                taskData.map((item) => {
+                    if (item.isCompleted){
+                        return {
+                            details: "", 
+                            isCompleted: item.isCompleted
+                        };
+                    } else return item; 
+                })
             )
+        } else if (filterMode === "complete"){
+            setFilteredTaskData(
+                taskData.map((item) => {
+                    if (!item.isCompleted){
+                        return {
+                            details: "", 
+                            isCompleted: item.isCompleted
+                        };
+                    } else return item;
+                })
+            )
+        } else {
+            setFilteredTaskData(taskData)
         }
-        filterList(); 
+
     }, [taskData, filterMode])
 
 

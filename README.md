@@ -42,12 +42,6 @@ Install expo:
 npm install expo
 ```
 
-### Start the Project
-
-```bash
-npx expo start
-```
-
 ## Running the App
 
 Follow the instructions in the terminal to open the app on an emulator or a physical device.

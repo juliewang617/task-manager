@@ -69,7 +69,7 @@ export default function TaskListScreen(){
      * @param {integer} index - the index of the task item to be updated
      */
     const checkTaskItem = (index) => {
-        // // Copy taskData, update the item, update taskData
+        // Copy taskData, update the item, update taskData
         let newArr = [...taskData]; 
         newArr[index].isCompleted = !newArr[index].isCompleted
         setTaskData(newArr); 
